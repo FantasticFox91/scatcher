@@ -1,1 +1,1 @@
-# scatcher
+# ScetchPad
