@@ -13,7 +13,7 @@ button{
 
 .gridDiv{
     background-color: whitesmoke;
-    /* border:1px solid #4d4d4d; */
+    
 }
 
 /* .gridDiv:hover{
@@ -41,9 +41,6 @@ button{
     background: black;
 }
 
-.randomTrace{
-    
-}
 
 img{
     position: absolute;
@@ -54,14 +51,63 @@ img{
     height: 112%;
 }
 
-header{
+#header{
     display: flex;
     background: azure;
     border-radius: 10px;
     justify-content: center;
     box-shadow: 3px 3px #4f4f4f;
+    padding: 0px 10px;
+    
 }
 
+button{
+  background: rgb(214, 214, 214);
+  border-radius: 25px;
+  color:black;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.9),7px 7px 20px 0 rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  border: 10px black;
+}
+
+.clickedBtn{
+  box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7), inset 7px 7px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+input{
+    border:none;
+    
+}
+
+#value{
+    margin: 10px;
+}
+
+#settings{
+    display: flex;
+    background: azure;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 3px 3px #4f4f4f;
+    margin-top: 25px;
+    font-size: 2rem;
+    
+}
+
+#settingContainer{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    
+}
 
 body{
     background-color: #DFDBE5;

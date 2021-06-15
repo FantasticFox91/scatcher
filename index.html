@@ -12,18 +12,22 @@
         </div> 
     </header>
     <div class="main">
-        <button onclick=onBtnClick()>Reset</button>
-        <button onclick=randomColor()>Random Color</button>
-        <button onclick = blackTrace()>Black color</button>
+        <button onclick=onBtnClick() >Reset</button>
+        <button onclick=randomColor() id="randomColor">Random Color</button>
+        <button onclick = blackTrace() id="blackTrace">Black color</button>
         <!-- <button onclick = grayScale()>Gray Scale</button> -->
-        <button onclick = eraser()>Eraser</button>
+        <button onclick = eraser() id="eraser">Eraser</button>
         <button >Pick color <input type="color" id="chosenColor" onclick = chosen()></button>
             <div class="container">
             <img src="notePad.jpg" alt="NotePad picture">
           
     </div>
+    <div id="settingContainer">
+    <div id="settings">
+    <p id="value">Your number of squares is 16x16</p>
     <input type="range" name="range" id="range" max=64 min="4" value="16" step="2">
-            
+    </div>
+    </div>      
    <!-- Script file  -->
 <script src="script.js"></script>
 </body>

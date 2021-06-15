@@ -1,8 +1,9 @@
 var div = document.createElement("div");
 const divContainer = document.getElementsByClassName("container");
 const div2 = document.querySelectorAll("div.gridDiv");
-const range = document.getElementById("range")
-var value = 16;
+const range = document.getElementById("range");
+const buttons = document.querySelectorAll("button")
+
 
 
 function removeAllChildNodes(parent) {
@@ -17,13 +18,13 @@ function onrandomTrace(item){
 }
 
 function onBtnClick(){
-    value = prompt("How many squares do you want?");
+    let rangeValue = document.getElementById("range").value;
     removeAllChildNodes(divContainer[0]);
     let img = document.createElement("img");
     img.setAttribute("src", "notePad.jpg");
     divContainer[0].appendChild(img)
-    createField(value);
-    divContainer[0].style.gridTemplateColumns = `repeat(${value}, 1fr)`;
+    createField(rangeValue);
+    divContainer[0].style.gridTemplateColumns = `repeat(${rangeValue}, 1fr)`;
 }
 
 function addDivInsideContainer(){
@@ -45,10 +46,13 @@ function setRandomColor(){
 
 function blackTrace(){
     document.querySelectorAll("div.gridDiv").forEach(el => el.addEventListener("mouseover", ()=> el.style.background = "black"));
+    document.getElementById("blackTrace").classList.toggle("clickedBtn");
 }
 
 function randomColor(){
     document.querySelectorAll("div.gridDiv").forEach(el => el.addEventListener("mouseover", ()=> el.style.background = setRandomColor()));
+    document.getElementById("randomColor").classList.toggle("clickedBtn");
+
 }
 
 // function grayScale(){
@@ -59,6 +63,7 @@ function randomColor(){
 
 function eraser(){
     document.querySelectorAll("div.gridDiv").forEach(el => el.addEventListener("mouseover", ()=> el.style.background = "whitesmoke"));
+    document.getElementById("eraser").classList.toggle("clickedBtn");
 }
 
 function chosen(){
@@ -73,7 +78,12 @@ createFieldRange = () => {
     divContainer[0].appendChild(img)
     createField(rangeValue);
     divContainer[0].style.gridTemplateColumns = `repeat(${rangeValue}, 1fr)`;
+    document.getElementById("value").textContent = `Your number of squares is ${rangeValue}x${rangeValue}`;
 }
 
+buttons.forEach(el=>el.addEventListener("onclick",()=>{
+    el.classList.toggle("clickedBtn")
+}));
+
 range.addEventListener("mouseup", createFieldRange)
-createField(value);
+createField(16);
